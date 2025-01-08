@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --DarkSlateGrey: hsl(234, 29%, 20%);
+    --CharcoalGrey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* font-family */
+    --Roboto: "Roboto", serif;
+
+    /* font size */
+    --fss: 16px;
+    --fsm: 20px;
+    --fsl: 35px;
+
+    /* font weight */
+    --fws: 400;
+    --fwl: 700;
+
+    /* border */
+    --Brs: 10px;
+    --Brm: 15px;
+    --Brl: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--DarkSlateGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Roboto);
+    font-size: var(--fss);
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--White);
+    width: 70%;
+}
+
+.mainContainer figure {
+    width: 100%;
+}
+.mobile-image {
+    width: 100%;
+}
+
+.formSection {
+    padding: 20px;
+}
+
+header {
+    font-size: var(--fsl);
+    font-weight: var(--fwl);
+    color: var(--DarkSlateGrey);
+    padding-bottom: 15px;
+}
+
+p {
+    color: var(--CharcoalGrey);
+    padding-bottom: 15px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list img {
+    align-self:flex-start
+}
+
+.emailForm {
+    padding-top: 10px;
+}
+
+.emailForm div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emailForm label {
+    color: var(--DarkSlateGrey);
+    font-weight: var(--fwl);
+}
+
+.errorText {
+    font-weight: var(--fwl);
+    color: var(--Tomato);
+    display: none;
+}
+
+.inputSpace {
+    margin: 5px 0px 20px 0px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--Grey);
+    border-radius: var(--Brs);
+    outline-color: var(--Grey);
+}
+
+.inputSpace::placeholder {
+    font-family: var(--Roboto);
+    color: var(--Grey);
+}
+
+.inputSpace.error::placeholder {
+    color: var(--Tomato);
+}
+
+.SubscribeBtn {
+    font-family: var(--Roboto);
+    background-color: var(--DarkSlateGrey);
+    border: none;
+    color: var(--White);
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--Brs);
+    cursor: pointer;
+}
+
+button:active, button:hover {
+    background-color: var(--Tomato);
+}
+
+
+/* success page styles */
+.successContainer {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 100px 20px 20px 20px;
+    display: none;
+}
+
+.successContainer header {
+    margin-top: 20px;
+}
+
+.successContainer span {
+    color: var(--DarkSlateGrey);
+    font-weight: var(--fwl);
+}
+
+.successContainer button {
+    font-family: var(--Roboto);
+    background-color: var(--DarkSlateGrey);
+    border: none;
+    color: var(--White);
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--Brs);
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.successContainer button:active, .successContainer button:hover {
+    background-color: var(--Tomato);
+}
+
+.desktop-image {
+    display: none;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    margin-top: 20px; 
+}
+
+.attribution a { 
+    color: hsl(228, 38%, 95%); 
+}
+
+@media (min-width: 900px) {
+    .mainContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 10px;
+        width: 50%;
+        border-radius: var(--Brm);
+    }
+
+    .mainContainer figure {
+        width: 50%;
+    }
+
+    .desktop-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .successContainer {
+        width: 30%;
+        height: auto;
+        padding: 40px;
+        border-radius: var(--Brl);
+    }
+
+    .successContainer button {
+        margin-top: none;
+    }
+    
+}
