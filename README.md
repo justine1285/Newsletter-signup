@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/learning-paths/javascript-fundamentals-oR7g6-mTZ-/steps/67054b255832c087f2d7cb6d/challenge/refactor](https://www.frontendmentor.io/learning-paths/javascript-fundamentals-oR7g6-mTZ-/steps/67054b255832c087f2d7cb6d/challenge/refactor)
+- Live Site URL: [https://justine1285.github.io/Newsletter-signup/](https://justine1285.github.io/Newsletter-signup/)
 
 ## My process
 
